@@ -1,0 +1,32 @@
+.result-details {
+    padding-top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5; 
+    color: #666;
+    font-weight: bold;
+}
+
+.score {
+    padding-bottom: 10px;
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(to right, #ccc, #ccc);
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 50%;
+}
+
+.progress {
+    height: 100%;
+    background-color: #007bff;
+    transition: width 0.3s ease-in-out;
+}

@@ -1,0 +1,14 @@
+.detail {
+    display: flex;
+    gap: 20px;
+}
+
+.detail--content {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    width: 100%;
+}

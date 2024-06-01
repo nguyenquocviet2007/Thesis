@@ -1,0 +1,60 @@
+.assessment-list {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.assessment-list h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.assessment-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.assessment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.file-icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.assessment-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+}
+
+.assessment-body {
+    margin-left: 30px;
+}
+
+.assessment-description {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.assessment-links {
+    margin-top: 10px;
+}
+
+.assessment-link {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.assessment-link:hover {
+    text-decoration: underline;
+}
