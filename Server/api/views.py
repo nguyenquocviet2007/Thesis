@@ -248,14 +248,15 @@ class UploadQuestion(APIView):
             courseId = serializer.data[0]['id']
         
         title = request.data['title']
+        description = request.data['description']
         due_date = request.data['due_date']
         created_at = datetime.now()
         status = 'Pending'
         connection = psycopg2.connect(database='qgae', user='qgae', password='quocviet01', host='localhost', port='5432')
         connection.autocommit = True
         cursor = connection.cursor()
-        insert_assignment_table_query = '''INSERT INTO api_assignment (title, due_date, created_at, status) VALUES (%s, %s, %s, %s)'''
-        insert_assignment_table = (title, due_date, created_at, status)
+        insert_assignment_table_query = '''INSERT INTO api_assignment (title, description, due_date, created_at, status) VALUES (%s, %s, %s, %s, %s)'''
+        insert_assignment_table = (title, description, due_date, created_at, status)
         cursor.execute(insert_assignment_table_query, insert_assignment_table)
         get_assignment_id_query = '''SELECT id from api_assignment WHERE "title" = %s'''
         get_assignment_id = (title, )
@@ -418,6 +419,7 @@ class ResultView(APIView):
         )
         
         result = []
+        reason = []
         for i in range(numOfQuestion):
             eval_result = evaluator.evaluate_strings(
                 prediction=serializer.data['user_answer'][i],
@@ -425,9 +427,11 @@ class ResultView(APIView):
                 input=serializer.data['question'][i]
             )
             result.append(eval_result['score'])
+            reason.append(eval_result['reason'])
         
         data = {
-            "result": result
+            "result": result,
+            "reason": reason
         }
         id = Assignment.objects.get(id=id)
         serializer = AssignmentSerializer(id, data=data, partial=True)

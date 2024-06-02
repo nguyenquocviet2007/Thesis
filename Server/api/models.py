@@ -21,11 +21,13 @@ class Student(AbstractUser):
     
 class Assignment(models.Model):
     title = models.CharField(max_length=255)
+    description = models.TextField(default='', null=True)
     key = models.TextField(default='', null=True)
     question = ArrayField(models.TextField(), blank=True, null=True)
     answer = ArrayField(models.TextField(), blank=True, null=True)
     user_answer = ArrayField(models.TextField(), blank=True, null=True)
     result = ArrayField(models.TextField(), blank=True, null=True)
+    reason = ArrayField(models.TextField(), blank=True, null=True)
     status = models.TextField(default='Pending', null=True)
     url = models.TextField(default='', null=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
