@@ -30,3 +30,8 @@
     background-color: #007bff;
     transition: width 0.3s ease-in-out;
 }
+
+.bold {
+    font-weight: bold;
+    color: black;
+}

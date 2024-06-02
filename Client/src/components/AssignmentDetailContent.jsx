@@ -159,8 +159,9 @@ const AssignmentDetailContent = ({ assignment }) => {
             resultList.push(
                 <div className="result-details" key={index}>
                     <span className="question">{question}</span>
-                    <p className="result">Your Answer: {assignment.user_answer[index]}</p>
-                    <p className="actual_answer">Actual Answer: {assignment.answer[index]}</p>
+                    <p className="result"><span className='bold'>Your Answer: </span>{assignment.user_answer[index]}</p>
+                    <p className="actual_answer"><span className='bold'>Actual Answer: </span>{assignment.answer[index]}</p>
+                    <p className="explain"><span className='bold'>Explain: </span>{assignment.reason[index]}</p>
                     <p className='score'>Score: {assignment.result[index]} / 10</p>
                     {assignment.result[index] && <ProgressBar score={assignment.result[index]} maxScore='10'/>}
                     <br />

@@ -21,4 +21,4 @@ class AssignmentSerializer(serializers.ModelSerializer):
     courses = CourseSerializer(many=True)
     class Meta:
         model = Assignment
-        fields = ["id", "title", "key", "question", "answer", "user_answer", "created_at", "result", "status", "url", "student", "courses"]
+        fields = ["id", "title", "key", "question", "answer", "user_answer", "created_at", "result", "status", "url", "student", "courses", "reason"]

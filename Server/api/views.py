@@ -427,7 +427,7 @@ class ResultView(APIView):
                 input=serializer.data['question'][i]
             )
             result.append(eval_result['score'])
-            reason.append(eval_result['reason'])
+            reason.append(eval_result['reasoning'])
         
         data = {
             "result": result,
@@ -437,6 +437,7 @@ class ResultView(APIView):
         serializer = AssignmentSerializer(id, data=data, partial=True)
         if serializer.is_valid():
             serializer.save()
+            print(serializer.data)
             return Response({
                 "message": "Here is your result",
                 "Result for each answer": serializer.data
