@@ -47,7 +47,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Heading styling */
 .submit-assignment-container h2 {
     font-size: 1.75rem;
     margin-bottom: 20px;
@@ -56,12 +55,10 @@
     padding-bottom: 5px;
 }
 
-/* Assignment information container */
 .assignment-info {
     margin-bottom: 30px;
 }
 
-/* Points possible section */
 .points-possible {
     display: flex;
     align-items: center;
@@ -79,14 +76,12 @@
     color: #007bff;
 }
 
-/* Paragraph styling */
 .assignment-info p {
     font-size: 1rem;
     color: #666;
     line-height: 1.6;
 }
 
-/* File input container */
 .file-input-container {
     margin-bottom: 20px;
 }
@@ -102,7 +97,6 @@
     padding: 5px;
 }
 
-/* Submit button styling */
 .submit-button {
     display: inline-block;
     padding: 10px 20px;

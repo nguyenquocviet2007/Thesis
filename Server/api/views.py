@@ -251,14 +251,14 @@ class UploadQuestion(APIView):
         description = request.data['description']
         due_date = request.data['due_date']
         created_at = datetime.now()
-        status = 'Pending'
+        assignment_status = 'Pending'
         connection = psycopg2.connect(database='qgae', user='qgae', password='quocviet01', host='localhost', port='5432')
         connection.autocommit = True
         cursor = connection.cursor()
         insert_assignment_table_query = '''INSERT INTO api_assignment (title, description, due_date, created_at, status) VALUES (%s, %s, %s, %s, %s)'''
-        insert_assignment_table = (title, description, due_date, created_at, status)
+        insert_assignment_table = (title, description, due_date, created_at, assignment_status)
         cursor.execute(insert_assignment_table_query, insert_assignment_table)
-        get_assignment_id_query = '''SELECT id from api_assignment WHERE "title" = %s'''
+        get_assignment_id_query = '''SELECT id from api_assignment WHERE "title" = %s ORDER BY id desc LIMIT 1  '''
         get_assignment_id = (title, )
         cursor.execute(get_assignment_id_query, get_assignment_id)
         assignment_id = cursor.fetchone()
@@ -269,10 +269,8 @@ class UploadQuestion(APIView):
         cursor.execute(insert_assignment_course_table_query, insert_assignment_course_table)
         
         cursor.close()
-        
-        return Response({
-            "message": "Upload Successfully!"
-        }, status=status.HTTP_201_CREATED)
+        message = "Upload successfully!"
+        return Response(message, status=status.HTTP_201_CREATED)
         
                 
 class GetAssignments(APIView):
