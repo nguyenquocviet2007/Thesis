@@ -98,7 +98,7 @@ const AssignmentDetailContent = ({ assignment }) => {
                         <strong>Points Possible</strong>
                         <div className="points">100</div>
                     </div>
-                    <p>Assignment Description</p>
+                    <p>{assignment.description}</p>
                 </div>
                 <h2>Assignment Submission</h2>
                 <form onSubmit={submitAssignment}>

@@ -31,7 +31,7 @@ const AssignmentContent = () => {
         assignmentList.push({
             id: item[0],
             title: item[1],
-            description: 'Test',
+            description: item[12],
             status: item[9]
         })
     })

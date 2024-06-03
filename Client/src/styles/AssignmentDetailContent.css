@@ -2,7 +2,7 @@
     padding-top: 10px;
     font-family: Arial, sans-serif;
     font-size: 1rem;
-    line-height: 1.5; 
+    line-height: 1.5;
     color: #666;
     font-weight: bold;
 }
@@ -34,4 +34,114 @@
 .bold {
     font-weight: bold;
     color: black;
+}
+
+.submit-assignment-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+.submit-assignment-container h2 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+/* Assignment information container */
+.assignment-info {
+    margin-bottom: 30px;
+}
+
+/* Points possible section */
+.points-possible {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.points-possible strong {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: #555;
+}
+
+.points-possible .points {
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+/* Paragraph styling */
+.assignment-info p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* File input container */
+.file-input-container {
+    margin-bottom: 20px;
+}
+
+.file-input-container span {
+    font-size: 1rem;
+    margin-right: 10px;
+    color: #555;
+}
+
+.file-input-container input[type='file'] {
+    font-size: 1rem;
+    padding: 5px;
+}
+
+/* Submit button styling */
+.submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.submit-button p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.footer {
+    padding-top: 15px;
+}
+
+.btn {
+    font-family: monospace;
+    background-color: #f3f7fe;
+    color: #14375f;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #14375f;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
 }
